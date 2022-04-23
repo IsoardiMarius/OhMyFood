@@ -1,0 +1,181 @@
+
+//=====================  HEADER ==================================//
+.position {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  background: #efeeee;
+  padding: 20px 0;
+  opacity: 0.8;
+  box-shadow: 1px -2px rgba(199, 198, 198, 0.63);
+
+}
+
+.position-text {
+  margin-left: 8px;
+}
+
+.reservation {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  background: rgb(248 248 248);
+  padding-bottom: 40px;
+
+}
+
+.reservation-title {
+  font-weight: 700;
+  font-size: 25px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.reservation-subtitle {
+  opacity: 0.8;
+}
+
+.reservation-btn {
+  display: flex;
+  justify-content: center;
+  padding: 15px 10px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  color: white;
+  margin: auto;
+  width: 65%;
+  margin-top: 20px;
+
+}
+
+.steps {
+  margin: 40px auto;
+  padding-bottom: 5px;
+
+  span:before {
+    content: attr(data-count);
+    background: #9356DCFF;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -10px;
+    top: 17px;
+    color: white;
+  }
+
+}
+
+.steps-title {
+  margin: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+
+.steps-steps {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  list-style-type: none;
+
+  .step {
+    padding: 20px 40px;
+    border-radius: 20px;
+    background: rgb(248 248 248);
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+
+  }
+
+  .fas {
+    margin-right: 15px;
+    opacity: 0.6;
+  }
+
+}
+
+//=====================  HEADER ==================================//
+// ====================  MAIN   ==================================//
+.restaurants {
+  background: rgb(248 248 248);
+}
+
+.restaurants-title {
+  margin: 0 0 0 20px;
+  padding-top: 35px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+
+
+  .card {
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+
+
+    .card-img {
+      height: 190px;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.card-new {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: block;
+  background: #99E2D0;
+  padding: 6px 5px;
+  font-size: 13px;
+  border-radius: 3px;
+  color: green;
+  font-weight: 500;
+}
+
+.card-title {
+  margin-bottom: 5px;
+}
+
+.card-content {
+  padding: 0 15px;
+}
+
+.card-like {
+  position: absolute;
+  right: 20px;
+  bottom: 35px;
+}
+
+.fa-heart:before {
+  font-size: 25px;
+}
+
+// ====================  MAIN   ==================================//
+

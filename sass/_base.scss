@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  color: black;
+  font-family: Roboto, sans-serif;
 
 }
 
@@ -8,9 +10,10 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
-   ========================================================================== */
+    ============================================= */
 
-/**
+
+/*
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
@@ -21,9 +24,10 @@ html {
 }
 
 /* Sections
-   ========================================================================== */
+   ============================================= */
 
-/**
+
+/*
  * Remove the margin in all browsers.
  */
 
@@ -50,9 +54,9 @@ h1 {
 }
 
 /* Grouping content
-   ========================================================================== */
+   ============================================= */
 
-/**
+/*
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
@@ -74,9 +78,9 @@ pre {
 }
 
 /* Text-level semantics
-   ========================================================================== */
+   ============================================= */
 
-/**
+/*
  * Remove the gray background on active links in IE 10.
  */
 
@@ -146,9 +150,9 @@ sup {
 }
 
 /* Embedded content
-   ========================================================================== */
+   ============================================= */
 
-/**
+/*
  * Remove the border on images inside links in IE 10.
  */
 
@@ -156,8 +160,8 @@ img {
   border-style: none;
 }
 
-/* Forms
-   ========================================================================== */
+/*   ============================================= */
+
 
 /**
  * 1. Change the font styles in all browsers.
@@ -318,7 +322,7 @@ textarea {
 }
 
 /* Interactive
-   ========================================================================== */
+   ============================================= */
 
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
@@ -337,7 +341,7 @@ summary {
 }
 
 /* Misc
-   ========================================================================== */
+   ============================================= */
 
 /**
  * Add the correct display in IE 10+.
@@ -356,7 +360,7 @@ template {
 }
 
 
-/* SECTION ONE ================================================================== */
+// ====================  HEADER   ================================//
 
 header h1 {
   font-size: 33px;
@@ -364,50 +368,52 @@ header h1 {
   text-align: center;
 
 }
+// ====================  HEADER   ================================//
 
-.position {
-  text-align: center;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  background: #efeeee;
-  padding: 20px 0;
-  opacity: 0.8;
-  box-shadow: 1px -2px rgba(199, 198, 198, 0.63);
+// ====================  FOOTER   ================================//
 
-}
 
-.position-text{
-  margin-left: 8px;
-}
+.footer {
+  padding: 20px;
+  background: #2d2b2b;
 
-.reservation {
-  text-align: center;
-  font-family: Roboto, sans-serif;
-  background: rgb(248 248 248);
-  padding-bottom: 40px;
+  .fas {
+    color: white;
+    margin-right: 15px;
+    font-size: 13px;
+  }
 
 }
 
-.reservation-title{
-  font-weight: 700;
-  font-size: 25px;
-  margin: auto;
-  padding-top: 30px;
+.footer .fa-hands-helping {
+  margin-right: 10px;
 }
 
-.reservation-subtitle{
-  opacity: 0.8;
-}
-
-.reservation-btn {
-  display: flex;
-  justify-content: center;
-  padding: 15px 10px;
-  background: linear-gradient(#FF79DA ,#9356DC);
-  border-radius: 30px;
+.footer-logo {
+  font-family: "Shrikhand", cursive;
   color: white;
-  margin: auto ;
-  width: 65%;
-  margin-top: 20px;
+  margin-left: 8px;
+  font-size: 19px;
 
 }
+
+.footer-lists {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-list {
+  margin: 10px;
+}
+
+.footer-link {
+  color: white;
+  margin: 10px auto;
+}
+
+// ====================  FOOTER   ================================//
+
+
+
+
