@@ -1,8 +1,12 @@
-
 //=====================  HEADER ==================================//
+.reservation-btn, span:before, .card {
+  color: white;
+  background: white;
+}
+
+
 .position {
   text-align: center;
-  font-family: Roboto, sans-serif;
   font-weight: 500;
   background: #efeeee;
   padding: 20px 0;
@@ -17,8 +21,7 @@
 
 .reservation {
   text-align: center;
-  font-family: Roboto, sans-serif;
-  background: rgb(248 248 248);
+  background: $background-grey;
   padding-bottom: 40px;
 
 }
@@ -35,16 +38,7 @@
 }
 
 .reservation-btn {
-  display: flex;
-  justify-content: center;
-  padding: 15px 10px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 30px;
-  color: white;
-  margin: auto;
-  width: 65%;
-  margin-top: 20px;
-
+  @include btn;
 }
 
 .steps {
@@ -53,7 +47,7 @@
 
   span:before {
     content: attr(data-count);
-    background: #9356DCFF;
+    background: $color-primary;
     width: 25px;
     height: 25px;
     border-radius: 20px;
@@ -63,14 +57,13 @@
     position: absolute;
     left: -10px;
     top: 17px;
-    color: white;
   }
 
 }
 
 .steps-title {
-  margin: 20px;
-  font-family: Roboto, sans-serif;
+  margin: 20px 5%;
+
   font-weight: 700;
 }
 
@@ -80,18 +73,16 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   list-style-type: none;
 
   .step {
     padding: 20px 40px;
     border-radius: 20px;
-    background: rgb(248 248 248);
+    background: $background-grey;
     width: 90%;
-    margin: auto;
-    margin-top: 20px;
+    margin: 20px auto auto auto;
     text-align: center;
-    font-family: Roboto, sans-serif;
     font-weight: 500;
     display: flex;
     justify-content: flex-start;
@@ -111,12 +102,12 @@
 //=====================  HEADER ==================================//
 // ====================  MAIN   ==================================//
 .restaurants {
-  background: rgb(248 248 248);
+  background: $background-grey;
 }
 
 .restaurants-title {
-  margin: 0 0 0 20px;
-  padding-top: 35px;
+  margin: 0 5%;
+  padding: 40px 0 20px 0;
 }
 
 .cards {
@@ -131,7 +122,7 @@
     display: block;
     position: relative;
     margin: 20px 0;
-    background: white;
+
     border-radius: 20px;
     width: 100%;
     padding-bottom: 20px;
@@ -151,7 +142,7 @@
   right: 20px;
   top: 10px;
   display: block;
-  background: #99E2D0;
+  background: $color-tertiary;
   padding: 6px 5px;
   font-size: 13px;
   border-radius: 3px;
@@ -178,4 +169,53 @@
 }
 
 // ====================  MAIN   ==================================//
+
+@media only screen and (min-width: 800px) {
+  .container {
+    max-width: 1280px;
+    margin: auto 0;
+  }
+
+
+
+  .steps-title {
+
+    margin: 0 3%;
+  }
+  .steps-steps, {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    .step {
+      padding: 20px;
+      justify-content: center;
+
+      .text {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .steps {
+    max-width: 1280px;
+  }
+
+  .restaurants-title {
+    margin: 0 3%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .steps-steps .step .text {
+    font-size: 20px;
+  }
+}
 

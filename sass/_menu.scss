@@ -1,0 +1,127 @@
+//=====================  HEADER ==================================//
+
+
+.header-logo-menu {
+  margin: 0 0 10px 0;
+}
+
+.fa-arrow-left:before {
+  position: absolute;
+  left: 20px;
+  top: 27px;
+  font-size: 20px;
+  color: #464343;
+}
+
+.img-couv {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+//=====================  HEADER ==================================//
+//=====================   MENU  ==================================//
+
+.menu-header {
+  padding: 16px 32px 0 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 30px 30px 0 0;
+  background-color: $background-grey;
+  position: relative;
+  padding-bottom: 30px;
+
+  .name {
+    margin: 5px 0 20px 0;
+    font-family: $font-logo;
+    font-weight: 400;
+  }
+}
+
+.menu-btn{
+  border: none;
+  background: inherit;
+  cursor: pointer;
+
+}
+
+.submenu-title{
+  font-weight: 400;
+  opacity: 0.9;
+  font-size: 16px;
+
+}
+
+.submenu-title:after {
+  content: '';
+  display: block;
+  background: $color-tertiary ;
+  width: 40px;
+  height: 2px;
+}
+
+
+.menu-card {
+
+  background: white;
+  border-radius: 10px;
+  width: 95%;
+  margin: 15px auto;
+  padding: 10px;
+  cursor: pointer;
+
+ h4,p {
+   margin: 0;
+   padding: 1px;
+ }
+}
+
+.menu-description, .menu-txt, .submenu-title{
+  margin-left: 14px;
+}
+
+.menu-card .menu-description{
+  font-size:  13px;
+  margin-top: 3px;
+}
+
+.menu-txt{
+  font-size: 15px;
+}
+
+
+  .menu-price {
+    float: right;
+    position: relative;
+    bottom: 20px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .order-btn{
+    @include btn;
+    color: white;
+    margin-top: 40px;
+
+  }
+
+
+
+
+@media only screen and (min-width: 850px) {
+
+  .menu-choices {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 5px;
+  }
+}
+
+//=====================   MENU  ==================================//
+
+
