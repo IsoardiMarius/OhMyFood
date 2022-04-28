@@ -4,7 +4,7 @@ Troisième projet du parcours "Développeur web" chez OpenClassroom. L'objectif 
 
 Vous pouvez retrouver le [brief complet ici](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf)
 
-![screenshot du site](./src/img/screenshot.png)
+![apercu du site](src/img/screenshot.png)
 
 ## Objectifs
 
@@ -58,6 +58,7 @@ Vous pouvez retrouver le [brief complet ici](https://s3-eu-west-1.amazonaws.com/
 - Validation W3C CSS : à passer, warning autorisés
 - Compatibilité : Dernières versions de Chrome, Firefox & Safari
 
-## Convention nommage commit
 
-Gitmoji https://gitmoji.carloscuesta.me/
+## Tester le projet
+
+Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : 
