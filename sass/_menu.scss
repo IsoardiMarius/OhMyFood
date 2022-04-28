@@ -19,6 +19,7 @@
   width: 100%;
   object-fit: cover;
 }
+
 //=====================  HEADER ==================================//
 //=====================   MENU  ==================================//
 
@@ -43,14 +44,14 @@
   }
 }
 
-.menu-btn{
+.menu-btn {
   border: none;
   background: inherit;
   cursor: pointer;
 
 }
 
-.submenu-title{
+.submenu-title {
   font-weight: 400;
   opacity: 0.9;
   font-size: 16px;
@@ -60,7 +61,7 @@
 .submenu-title:after {
   content: '';
   display: block;
-  background: $color-tertiary ;
+  background: $color-tertiary;
   width: 40px;
   height: 2px;
 }
@@ -75,50 +76,66 @@
   padding: 10px;
   cursor: pointer;
 
- h4,p {
-   margin: 0;
-   padding: 1px;
- }
+
+
+  h4, p {
+    margin: 0;
+    padding: 1px;
+  }
 }
 
-.menu-description, .menu-txt, .submenu-title{
+.menu-description, .menu-txt, .submenu-title {
   margin-left: 14px;
 }
 
-.menu-card .menu-description{
-  font-size:  13px;
+.menu-card .menu-description {
+  font-size: 12px;
   margin-top: 3px;
 }
 
-.menu-txt{
+.menu-txt {
   font-size: 15px;
 }
 
 
-  .menu-price {
-    float: right;
-    position: relative;
-    bottom: 20px;
-    font-size: 12px;
-    font-weight: 700;
-  }
+.menu-price {
+  float: right;
+  position: relative;
+  bottom: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
 
-  .order-btn{
-    @include btn;
-    color: white;
-    margin-top: 40px;
+.heart-menu{
+  color: rgba(222, 186, 232, 0.72);
 
-  }
+}
 
+.order-btn {
+  @include btn;
+  color: white;
+  margin-top: 40px;
 
+}
 
 
 @media only screen and (min-width: 850px) {
 
   .menu-choices {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
+  }
+
+  .submenu{
+    margin-left: 0!important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .img-couv {
+    max-height: 300px;
   }
 }
 

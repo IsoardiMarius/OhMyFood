@@ -88,6 +88,7 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    cursor: pointer;
 
 
   }
@@ -158,10 +159,12 @@
   padding: 0 15px;
 }
 
-.card-like {
+.heart-home {
   position: absolute;
   right: 20px;
   bottom: 35px;
+  color: rgba(222, 186, 232, 0.72);
+
 }
 
 .fa-heart:before {
@@ -171,11 +174,10 @@
 // ====================  MAIN   ==================================//
 
 @media only screen and (min-width: 800px) {
-  .container {
+  .container, .menu {
     max-width: 1280px;
-    margin: auto 0;
+    margin: auto;
   }
-
 
 
   .steps-title {

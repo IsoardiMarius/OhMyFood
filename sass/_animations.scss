@@ -1,0 +1,82 @@
+
+/********** animation appearance *************/
+
+@keyframes transition-step {
+  0% {
+    margin-left: -70px;
+    opacity: 0;
+    transform: scale(0.3);
+
+  }
+  100% {
+    margin-left: 20px;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes transition {
+  0% {
+    margin-left: -70px;
+    opacity: 0;
+    transform: scale(0.3);
+
+  }
+  100% {
+    margin-left: 5px;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.submenu  {
+  opacity: 0;
+  animation: transition 1s ease-in-out 250ms forwards;
+
+
+
+}
+
+
+.menu-card  {
+  opacity: 0;
+  animation: transition 1s ease-in-out 250ms forwards;
+
+}
+
+
+.step {
+  opacity: 0;
+  animation: transition-step 1s ease-in-out 250ms forwards;
+
+}
+/* HEART */
+
+@keyframes heart {
+  0% {
+    color: #c489b3;
+    transform: scale(0.3);
+
+  }
+
+  100% {
+    color: #ff79da;
+    transform: scale(1);
+
+  }
+}
+
+.fa-heart:hover {
+  animation: heart 1s ease-in-out 0.1s infinite;
+
+}
+/* HEART */
+
+
+
+
+
+
+
+
+
