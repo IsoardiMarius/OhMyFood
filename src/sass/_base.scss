@@ -23,10 +23,22 @@ $background-grey: rgb(248 248 248);
   text-decoration: none;
   color: black;
   font-family: $font-txt;
+  text-overflow: ellipsis;
+
+}
+
+.h4,p{
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+.menu-card{
+  text-overflow: ellipsis;
 }
 .card:hover, .step:hover
 {
-  background: linear-gradient( rgba(162, 116, 215, 0.1), rgba(241, 134, 210, 0.1));
+  background: linear-gradient(rgba(162, 116, 215, 0.1), rgba(241, 134, 210, 0.1));
 
 }
 

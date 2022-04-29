@@ -342,6 +342,16 @@ template {
   text-decoration: none;
   color: black;
   font-family: Roboto, sans-serif;
+  text-overflow: ellipsis;
+}
+
+.h4, p {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu-card {
+  text-overflow: ellipsis;
 }
 
 .card:hover, .step:hover {
