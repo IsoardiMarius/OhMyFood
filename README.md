@@ -63,4 +63,4 @@ Vous pouvez retrouver le [brief complet ici](https://s3-eu-west-1.amazonaws.com/
 
 Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : https://marius13127.github.io/P3_ohmyfood_Isoardi_Marius/  
 
-Sinon téléchargé le fichier zip pour pouvoir ajouter des modifications.
+Sinon téléchargé le fichier zip pour pouvoir effectuer des modifications.
