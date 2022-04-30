@@ -97,10 +97,12 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 }
 
 .menu-card {
-  animation: menu-appear 1s ease-in-out both;
-
+  animation: menu-appear 0.9s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 
 }
+
 
 
 /**************************************************/
@@ -109,8 +111,9 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   /*Background-Loader*/
 
   background-color: white;
-  animation: bg ease-in-out 3s forwards;
-  z-index: 1;
+  animation: bg ease-in-out 3s;
+  animation-fill-mode: forwards;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -126,16 +129,17 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   height: 100px;
   margin: auto;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  border: 15px solid #f3f3f3;
+  border: 10px solid #f3f3f3;
   border-left-color: $color-primary;
   border-right-color: $color-secondary;
-  border-radius: 100px;
-  animation:circle 3s ease-in-out forwards;
+  border-radius: 200px;
+  animation: spin 3s ease-in-out;
+  animation-fill-mode: forwards;
   visibility: hidden;
 }
 
@@ -147,13 +151,14 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   }
 
   100% {
-    visibility: hidden; /* appearance:none;*/
+    appearance: none;
   }
 }
 
-@keyframes circle {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
     visibility: visible;
   }
 
@@ -173,7 +178,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   100% {
     transform: rotate(0deg);
     opacity: 0;
-    visibility: hidden;
   }
 }
 
