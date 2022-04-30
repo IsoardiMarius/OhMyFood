@@ -91,6 +91,7 @@
 .menu-card .menu-description {
   font-size: 12px;
   margin-top: 3px;
+
 }
 
 .menu-txt {
@@ -106,10 +107,7 @@
   font-weight: 700;
 }
 
-.heart-menu{
-  color: rgba(222, 186, 232, 0.72);
 
-}
 
 .order-btn {
   @include btn;

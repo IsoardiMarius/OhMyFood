@@ -1,74 +1,184 @@
-
-/********** animation appearance *************/
-
-@keyframes transition-step {
-  0% {
-    margin-left: -70px;
-    opacity: 0;
-    transform: scale(0.3);
-
-  }
-  100% {
-    margin-left: 20px;
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes transition {
-  0% {
-    margin-left: -70px;
-    opacity: 0;
-    transform: scale(0.3);
-
-  }
-  100% {
-    margin-left: 5px;
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.submenu  {
-  opacity: 0;
-  animation: transition 1s ease-in-out 250ms forwards;
-
-
-
-}
-
-
-.menu-card  {
-  opacity: 0;
-  animation: transition 1s ease-in-out 250ms forwards;
-
-}
-
-
-.step {
-  opacity: 0;
-  animation: transition-step 1s ease-in-out 250ms forwards;
-
-}
 /* HEART */
 
-@keyframes heart {
+@keyframes heart-transp {
   0% {
-    color: #c489b3;
-    transform: scale(0.3);
+    opacity: 1;
+  }
 
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes heart-color {
+  0% {
+    clip-path: circle(0%);
   }
 
   100% {
-    color: #ff79da;
-    transform: scale(1);
-
+    visibility: visible;
+    clip-path: circle(100%);
   }
 }
 
-.fa-heart:hover {
-  animation: heart 1s ease-in-out 0.1s infinite;
+.hearts {
+
+  &__color {
+    position: absolute;
+    font-size: 40px;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient($color-primary, $color-secondary);
+    clip-path: circle(0%);
+  }
+
+  &__transp {
+    position: absolute;
+    font-size: 40px;
+    color: rgba(24, 23, 23, 0.678);
+  }
+
+  /*Hearts, Hover animation*/
+
+  &:hover &__color {
+    animation: heart-color 600ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  &:hover &__transp {
+    animation: heart-transp 600ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+.heart-menu {
+  right: 30px;
+  top: 10px;
+}
+
+/************************************* HEART ***********************************/
+
+/************************** Delai appearance MENU ***************************************/
+
+$anim-delay: 0.1s; /*Délais de l'animation*/
+$menu-categories: 3; /*Catégories (Entrée, Plat, Dessert)*/
+$menu-items: 4; /*Nombre d'éléments par catégories*/
+$column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colone*/
+
+.submenu {
+  @for $i from 1 through $menu-categories { /*Pour chaque catégories*/
+    &:nth-child(#{$i}) {
+      .menu-card {
+        @for $j from 1 through $menu-items { /*Pour */
+          &:nth-child(#{$j}) {
+            $column-offset: $i - 1; /*Child -1*/
+            $anim-offset: $column-offset * $column-anim-duration; /*Child -1 multiplier par animation par colone.*/
+            animation-delay: $anim-offset + ($j * ($anim-delay)); /*Delais final est offset + J*/
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes menu-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(15px);
+  }
+}
+
+.menu-card {
+  animation: menu-appear 1s ease-in-out both;
+
 
 }
-/* HEART */
+
+
+/**************************************************/
+
+.loadingbg {
+  /*Background-Loader*/
+
+  background-color: white;
+  animation: bg ease-in-out 3s forwards;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.loader {
+  /*Loader*/
+
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 15px solid #f3f3f3;
+  border-left-color: $color-primary;
+  border-right-color: $color-secondary;
+  border-radius: 100px;
+  animation:circle 3s ease-in-out forwards;
+  visibility: hidden;
+}
+
+/*Animation*/
+
+@keyframes bg {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden; /* appearance:none;*/
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+    visibility: visible;
+  }
+
+  25% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(720deg);
+  }
+
+  75% {
+    transform: rotate(1040deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/********************************************/
+
+
 
