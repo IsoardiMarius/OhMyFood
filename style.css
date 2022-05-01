@@ -393,7 +393,6 @@ header h1 {
   margin: 10px auto;
 }
 
-/* HEART */
 @keyframes heart-transp {
   0% {
     opacity: 1;
@@ -420,7 +419,7 @@ header h1 {
   font-size: 40px;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(rgb(147, 86, 220), rgba(255, 121, 218, 0.49));
+  background-image: linear-gradient(#9356DC, #FF79DA);
   clip-path: circle(0%);
 }
 .hearts__transp {
@@ -429,12 +428,10 @@ header h1 {
   color: rgba(24, 23, 23, 0.678);
 }
 .hearts:hover .hearts__color {
-  animation: heart-color 600ms ease-in-out;
-  animation-fill-mode: forwards;
+  animation: heart-color 600ms ease-in-out forwards;
 }
 .hearts:hover .hearts__transp {
-  animation: heart-transp 600ms ease-in-out;
-  animation-fill-mode: forwards;
+  animation: heart-transp 600ms ease-in-out forwards;
 }
 
 .heart-menu {
@@ -442,8 +439,8 @@ header h1 {
   top: 10px;
 }
 
-/************************************* HEART ***********************************/
-/************************** Delai appearance MENU ***************************************/
+/*HEART*/
+/*CARD MENU*/
 /*Délais de l'animation*/
 /*Catégories (Entrée, Plat, Dessert)*/
 /*Nombre d'éléments par catégories*/
@@ -555,17 +552,14 @@ header h1 {
   }
 }
 .menu-card {
-  animation: menu-appear 0.9s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  animation: menu-appear 0.9s ease-in-out both;
 }
 
-/**************************************************/
+/*LOADER*/
 .loadingbg {
   /*Background-Loader*/
   background-color: white;
-  animation: bg ease-in-out 3s;
-  animation-fill-mode: forwards;
+  animation: bg ease-in-out 3s forwards;
   z-index: 2;
   position: fixed;
   top: 0;
@@ -587,10 +581,10 @@ header h1 {
   right: 0;
   bottom: 0;
   border: 10px solid #f3f3f3;
-  border-left-color: rgb(147, 86, 220);
-  border-right-color: rgba(255, 121, 218, 0.49);
+  border-left-color: #9356DC;
+  border-right-color: #FF79DA;
   border-radius: 200px;
-  animation: spin 3s ease-in-out;
+  animation: spin 3s ease-in-out forwards;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -601,7 +595,7 @@ header h1 {
     visibility: visible;
   }
   100% {
-    appearance: none;
+    visibility: hidden;
   }
 }
 @keyframes spin {
@@ -623,9 +617,65 @@ header h1 {
   100% {
     transform: rotate(0deg);
     opacity: 0;
+    visibility: hidden;
   }
 }
-/********************************************/
+/* CHECK */
+/* Animations*/
+@keyframes shift {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateX(-55px);
+  }
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.menu-check {
+  width: 0;
+  max-width: 58px;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
+}
+
+.menu-card:hover .menu-price {
+  animation: shift 0.3s ease-in-out forwards;
+}
+.menu-card:hover .menu-check {
+  width: 20%;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.menu-card:hover .menu-check i {
+  opacity: 1;
+  animation: loading 0.3s ease-in-out;
+}
+
+.fa-check-circle {
+  font-size: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .reservation-btn, span:before, .card {
   color: white;
   background: white;
@@ -665,12 +715,17 @@ header h1 {
   display: flex;
   justify-content: center;
   padding: 15px 10px;
-  background: linear-gradient(rgba(255, 121, 218, 0.49), rgb(147, 86, 220));
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   margin: auto;
   width: 65%;
   margin-top: 20px;
   max-width: 280px;
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.reservation-btn:hover {
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.5);
+  background: linear-gradient(rgba(253, 113, 220, 0.49), #a96af5);
 }
 
 .steps {
@@ -679,7 +734,7 @@ header h1 {
 }
 .steps span:before {
   content: attr(data-count);
-  background: rgb(147, 86, 220);
+  background: #9356DC;
   width: 25px;
   height: 25px;
   border-radius: 20px;
@@ -877,6 +932,7 @@ header h1 {
   font-weight: 400;
   opacity: 0.9;
   font-size: 16px;
+  margin-top: 40px;
 }
 
 .submenu-title:after {
@@ -925,14 +981,19 @@ header h1 {
   display: flex;
   justify-content: center;
   padding: 15px 10px;
-  background: linear-gradient(rgba(255, 121, 218, 0.49), rgb(147, 86, 220));
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   margin: auto;
   width: 65%;
   margin-top: 20px;
   max-width: 280px;
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
   color: white;
   margin-top: 40px;
+}
+.order-btn:hover {
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.5);
+  background: linear-gradient(rgba(253, 113, 220, 0.49), #a96af5);
 }
 
 @media only screen and (min-width: 850px) {

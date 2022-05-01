@@ -1,4 +1,4 @@
-/* HEART */
+//HEART//
 
 @keyframes heart-transp {
   0% {
@@ -43,13 +43,13 @@
   /*Hearts, Hover animation*/
 
   &:hover &__color {
-    animation: heart-color 600ms ease-in-out;
-    animation-fill-mode: forwards;
+    animation: heart-color 600ms ease-in-out forwards;
+
   }
 
   &:hover &__transp {
-    animation: heart-transp 600ms ease-in-out;
-    animation-fill-mode: forwards;
+    animation: heart-transp 600ms ease-in-out forwards;
+
   }
 }
 
@@ -58,9 +58,9 @@
   top: 10px;
 }
 
-/************************************* HEART ***********************************/
+/*HEART*/
 
-/************************** Delai appearance MENU ***************************************/
+/*CARD MENU*/
 
 $anim-delay: 0.1s; /*Délais de l'animation*/
 $menu-categories: 3; /*Catégories (Entrée, Plat, Dessert)*/
@@ -97,22 +97,18 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 }
 
 .menu-card {
-  animation: menu-appear 0.9s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  animation: menu-appear 0.9s ease-in-out both;
 
 }
 
 
-
-/**************************************************/
+/*LOADER*/
 
 .loadingbg {
   /*Background-Loader*/
 
   background-color: white;
-  animation: bg ease-in-out 3s;
-  animation-fill-mode: forwards;
+  animation: bg ease-in-out 3s forwards;
   z-index: 2;
   position: fixed;
   top: 0;
@@ -138,7 +134,7 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   border-left-color: $color-primary;
   border-right-color: $color-secondary;
   border-radius: 200px;
-  animation: spin 3s ease-in-out;
+  animation: spin 3s ease-in-out forwards;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -151,7 +147,8 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   }
 
   100% {
-    appearance: none;
+
+    visibility: hidden;
   }
 }
 
@@ -178,11 +175,92 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   100% {
     transform: rotate(0deg);
     opacity: 0;
+    visibility: hidden;
   }
 }
 
+/* CHECK */
+/* Animations*/
+@keyframes shift {
 
-/********************************************/
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateX(-55px);
+  }
+
+}
+
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.menu-check {
+  width: 0;
+  max-width: 58px;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  background: $color-tertiary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
+
+
+}
+
+
+.menu-card {
+
+
+  &:hover {
+
+    .menu-price {
+
+      animation: shift 0.3s ease-in-out forwards;
+
+    }
+
+    .menu-check {
+      width: 20%;
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+
+      & i {
+        opacity: 1;
+        animation: loading 0.3s ease-in-out;
+      }
+
+    }
+
+  }
+}
+
+.fa-check-circle {
+
+  font-size: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
 
 
 
