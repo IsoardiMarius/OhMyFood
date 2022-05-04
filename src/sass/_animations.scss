@@ -130,13 +130,13 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   left: 0;
   right: 0;
   bottom: 0;
+  animation: spin 3s ease-in-out forwards;
+  animation-fill-mode: forwards;
+  visibility: hidden;
   border: 10px solid #f3f3f3;
   border-left-color: $color-primary;
   border-right-color: $color-secondary;
   border-radius: 200px;
-  animation: spin 3s ease-in-out forwards;
-  animation-fill-mode: forwards;
-  visibility: hidden;
 }
 
 /*Animation*/
@@ -179,7 +179,7 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   }
 }
 
-/* CHECK */
+/*********** CHECK *********/
 /* Animations*/
 @keyframes shift {
 
@@ -202,6 +202,7 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
     transform: rotate(1turn);
   }
 }
+
 
 .menu-check {
   width: 0;
@@ -259,15 +260,69 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 
 }
 
-.menu-card-txt,.menu-description,.menu-txt  {
-  max-width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  text-overflow: ellipsis;
-  position: relative;
+/*********** ELLIPSIS **************/
 
+.menu-card {
+
+  &:hover {
+
+    h4 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 150px;
+
+    }
+
+    p {
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 150px;
+    }
+  }
 }
+
+@media only screen and (max-width: 850px) {
+
+  .menu-card {
+
+    &:hover {
+
+      h4, p {
+        text-overflow: ellipsis;
+        overflow: visible;
+        white-space: nowrap;
+
+
+
+      }
+
+    }
+
+  }
+}
+
+@media only screen and (min-width:950px) {
+
+  .menu-card {
+
+    &:hover {
+
+      h4, p {
+        text-overflow: ellipsis;
+        overflow: visible;
+        white-space: nowrap;
+
+
+      }
+
+    }
+
+  }
+}
+
 
 
 

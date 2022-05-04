@@ -343,7 +343,11 @@ template {
   text-decoration: none;
   color: black;
   font-family: Roboto, sans-serif;
+}
+
+.menu-card, .name {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .card:hover, .step:hover {
@@ -581,13 +585,13 @@ header h1 {
   left: 0;
   right: 0;
   bottom: 0;
+  animation: spin 3s ease-in-out forwards;
+  animation-fill-mode: forwards;
+  visibility: hidden;
   border: 10px solid #f3f3f3;
   border-left-color: #9356DC;
   border-right-color: #FF79DA;
   border-radius: 200px;
-  animation: spin 3s ease-in-out forwards;
-  animation-fill-mode: forwards;
-  visibility: hidden;
 }
 
 /*Animation*/
@@ -621,7 +625,7 @@ header h1 {
     visibility: hidden;
   }
 }
-/* CHECK */
+/*********** CHECK *********/
 /* Animations*/
 @keyframes shift {
   0% {
@@ -677,15 +681,34 @@ header h1 {
   align-items: center;
 }
 
-.menu-card-txt, .menu-description, .menu-txt {
-  max-width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
+/*********** ELLIPSIS **************/
+.menu-card:hover h4 {
   text-overflow: ellipsis;
-  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 150px;
+}
+.menu-card:hover p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 150px;
 }
 
+@media only screen and (max-width: 850px) {
+  .menu-card:hover h4, .menu-card:hover p {
+    text-overflow: ellipsis;
+    overflow: visible;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .menu-card:hover h4, .menu-card:hover p {
+    text-overflow: ellipsis;
+    overflow: visible;
+    white-space: nowrap;
+  }
+}
 .reservation-btn, span:before, .card {
   color: white;
   background: white;
@@ -961,7 +984,6 @@ header h1 {
   padding: 10px;
   cursor: pointer;
   height: 60px;
-  overflow-y: hidden;
 }
 .menu-card h4, .menu-card p {
   margin: 0;
