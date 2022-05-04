@@ -259,6 +259,16 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 
 }
 
+.menu-card-txt,.menu-description,.menu-txt  {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  position: relative;
+
+}
+
 
 
 

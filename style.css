@@ -343,6 +343,7 @@ template {
   text-decoration: none;
   color: black;
   font-family: Roboto, sans-serif;
+  overflow-x: hidden;
 }
 
 .card:hover, .step:hover {
@@ -676,6 +677,15 @@ header h1 {
   align-items: center;
 }
 
+.menu-card-txt, .menu-description, .menu-txt {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
 .reservation-btn, span:before, .card {
   color: white;
   background: white;
@@ -950,6 +960,8 @@ header h1 {
   margin: 15px auto;
   padding: 10px;
   cursor: pointer;
+  height: 60px;
+  overflow-y: hidden;
 }
 .menu-card h4, .menu-card p {
   margin: 0;
