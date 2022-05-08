@@ -12,28 +12,13 @@
   }
 }
 
-@-webkit-keyframes heart-color {
-  0% {
-    -webkit-clip-path: circle(0%);
-    clip-path: circle(0%);
-  }
-
-  100% {
-    visibility: visible;
-    -webkit-clip-path: circle(100%);
-    clip-path: circle(100%);
-  }
-}
-
 @keyframes heart-color {
   0% {
-    -webkit-clip-path: circle(0%);
     clip-path: circle(0%);
   }
 
   100% {
     visibility: visible;
-    -webkit-clip-path: circle(100%);
     clip-path: circle(100%);
   }
 }
@@ -45,10 +30,7 @@
     font-size: 40px;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
-    background-image: -o-linear-gradient($color-primary, $color-secondary);
     background-image: linear-gradient($color-primary, $color-secondary);
-    -webkit-clip-path: circle(0%);
     clip-path: circle(0%);
   }
 
@@ -61,13 +43,11 @@
   /*Hearts, Hover animation*/
 
   &:hover &__color {
-    -webkit-animation: heart-color 600ms ease-in-out forwards;
     animation: heart-color 600ms ease-in-out forwards;
 
   }
 
   &:hover &__transp {
-    -webkit-animation: heart-transp 600ms ease-in-out forwards;
     animation: heart-transp 600ms ease-in-out forwards;
 
   }
@@ -95,7 +75,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
           &:nth-child(#{$j}) {
             $column-offset: $i - 1; /*Child -1*/
             $anim-offset: $column-offset * $column-anim-duration; /*Child -1 multiplier par animation par colone.*/
-            -webkit-animation-delay: $anim-offset + ($j * ($anim-delay));
             animation-delay: $anim-offset + ($j * ($anim-delay)); /*Delais final est offset + J*/
           }
         }
@@ -105,37 +84,19 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 }
 
 
-@-webkit-keyframes menu-appear {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
-  }
-}
-
-
 @keyframes menu-appear {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translateY(15px);
     transform: translateY(15px);
   }
 }
 
 .menu-card {
-  -webkit-animation: menu-appear 0.9s ease-in-out both;
   animation: menu-appear 0.9s ease-in-out both;
 
 }
@@ -147,7 +108,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   /*Background-Loader*/
 
   background-color: white;
-  -webkit-animation: bg ease-in-out 3s forwards;
   animation: bg ease-in-out 3s forwards;
   z-index: 2;
   position: fixed;
@@ -170,9 +130,7 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-animation: spin 3s ease-in-out forwards;
   animation: spin 3s ease-in-out forwards;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   visibility: hidden;
   border: 10px solid #f3f3f3;
@@ -182,17 +140,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 }
 
 /*Animation*/
-
-@-webkit-keyframes bg {
-  0% {
-    visibility: visible;
-  }
-
-  100% {
-
-    visibility: hidden;
-  }
-}
 
 @keyframes bg {
   0% {
@@ -205,64 +152,27 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   }
 }
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  25% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-
-  50% {
-    -webkit-transform: rotate(720deg);
-    transform: rotate(720deg);
-  }
-
-  75% {
-    -webkit-transform: rotate(1040deg);
-    transform: rotate(1040deg);
-    opacity: 0.5;
-  }
-
-  100% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 1;
     visibility: visible;
   }
 
   25% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 
   50% {
-    -webkit-transform: rotate(720deg);
     transform: rotate(720deg);
   }
 
   75% {
-    -webkit-transform: rotate(1040deg);
     transform: rotate(1040deg);
     opacity: 0.5;
   }
 
   100% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 0;
     visibility: hidden;
@@ -271,53 +181,24 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 
 /*********** CHECK *********/
 /* Animations*/
-@-webkit-keyframes shift {
-
-  0% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-
-  100% {
-    -webkit-transform: translateX(-55px);
-    transform: translateX(-55px);
-  }
-
-}
 @keyframes shift {
 
   0% {
-    -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
 
   100% {
-    -webkit-transform: translateX(-55px);
     transform: translateX(-55px);
   }
 
-}
-
-
-@-webkit-keyframes loading {
-  from {
-    -webkit-transform: rotate(0turn);
-    transform: rotate(0turn);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
-  }
 }
 
 
 @keyframes loading {
   from {
-    -webkit-transform: rotate(0turn);
     transform: rotate(0turn);
   }
   to {
-    -webkit-transform: rotate(1turn);
     transform: rotate(1turn);
   }
 }
@@ -332,14 +213,8 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   top: 0;
   right: 0;
   background: $color-tertiary;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border-radius: 0 10px 10px 0;
   opacity: 0;
@@ -355,8 +230,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 
     .menu-price {
 
-      -webkit-animation: shift 0.3s ease-in-out forwards;
-
       animation: shift 0.3s ease-in-out forwards;
 
     }
@@ -365,13 +238,10 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
       width: 20%;
       visibility: visible;
       opacity: 1;
-      -webkit-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
 
       & i {
         opacity: 1;
-        -webkit-animation: loading 0.3s ease-in-out;
         animation: loading 0.3s ease-in-out;
       }
 
@@ -384,14 +254,8 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
 
   font-size: 25px;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 
 }
@@ -403,7 +267,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
   &:hover {
 
     h4 {
-      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -412,8 +275,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
     }
 
     p {
-
-      -o-text-overflow: ellipsis;
 
       text-overflow: ellipsis;
       overflow: hidden;
@@ -430,7 +291,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
     &:hover {
 
       h4, p {
-        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         overflow: visible;
         white-space: nowrap;
@@ -451,7 +311,6 @@ $column-anim-duration: ($anim-delay * $menu-items); /*Temps d'animation par colo
     &:hover {
 
       h4, p {
-        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         overflow: visible;
         white-space: nowrap;
