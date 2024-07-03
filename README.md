@@ -2,7 +2,7 @@
 
 ## Tester le projet
 
-Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : https://isoardimarius.github.io/P3_ohmyfood_Isoardi_Marius/  
+Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : https://isoardimarius.github.io/OhMyFood/  
 
 ![apercu du site](src/img/screenshot.png)
 
