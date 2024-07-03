@@ -4,6 +4,8 @@
 
 Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : https://isoardimarius.github.io/P3_ohmyfood_Isoardi_Marius/  
 
+![apercu du site](src/img/screenshot.png)
+
 ## Technologies
 
 ** HTML / CSS / Sass **
